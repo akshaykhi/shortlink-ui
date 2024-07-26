@@ -1,0 +1,12 @@
+runtime: nodejs18
+
+handlers:
+  # Serve all static files with appropriate caching
+  - url: /(.*\..+)$
+    static_files: build/\1
+    upload: build/(.*\..+)$
+
+  # Serve the main page for all other URLs
+  - url: /
+    static_files: build/index.html
+    upload: build/index.html

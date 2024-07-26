@@ -89,7 +89,7 @@ const FormComponent = () => {
     <div className="form-container">
         <h1 id ="header">Create New Go Link</h1>
       <form onSubmit={handleSubmit} className="form">
-        <label htmlFor="employeeId">Employee Id:</label>
+        <label htmlFor="employeeId">Employee Id :</label>
         <input
           type="text"
           id="employeeId"
@@ -100,7 +100,7 @@ const FormComponent = () => {
         />
     {errors.employeeId && <span className="error">{errors.employeeId}</span>}
   
-      <label htmlFor="destinationUrl">Destination URL:</label>
+      <label htmlFor="destinationUrl">Destination URL :</label>
         <input
           type="text"
           id="destinationUrl"
@@ -110,7 +110,7 @@ const FormComponent = () => {
           required
         />
           <div className="form-group">
-          <label htmlFor="linkname">Link Name</label>
+          <label htmlFor="linkname">Link Name : </label>
           <input
             type="text"
             id="linkname"
@@ -118,18 +118,17 @@ const FormComponent = () => {
             value={formData.linkname}
             onChange={handleChange}
             required
-            pattern="go/.*"
-            placeholder="go/"
+            // pattern="go/.*"
           />
           </div>
      {errors.linkname && <span className="error">{errors.linkname}</span>}
-        <label htmlFor="description">Description:</label>
+        <label htmlFor="description">Description :</label>
         <textarea
           id="description"
           name="description"
           value={formData.description}
           onChange={handleChange}
-          required
+          // required
         ></textarea>
 {errors.description && <span className="error">{errors.description}</span>}
         <button type="submit">Submit</button>

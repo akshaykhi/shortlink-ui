@@ -8,11 +8,21 @@
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   
-    /* background-image: url('/background.jpg'); Adjust path as needed */
+    /* background-image: url('/background.jpg'); */
     background-size: cover; /* Cover the entire container */
     background-position: center; /* Center the image */
+
+
   }
   
+  body {
+    /* images link : https://www.freepik.com/free-photos-vectors/light-background/3#uuid=3609370e-20f1-435a-93eb-e2e5a5bd6730 */
+    background-image: url('/src/images/abcd.jpg'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+}
   #linkname-group{
     display:flex;
   }

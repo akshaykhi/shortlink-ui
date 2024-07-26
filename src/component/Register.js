@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Register.css';
@@ -86,10 +87,12 @@ const FormComponent = () => {
   };
 
   return (
+    <body>
     <div className="form-container">
-        <h1 id ="header">Create New Go Link</h1>
-      <form onSubmit={handleSubmit} className="form">
-        <label htmlFor="employeeId">Employee Id :</label>
+      <h1 id ="header">Create New Go Link</h1>
+      <form onSubmit={handleSubmit} >
+      <div className="form-group">
+        <label htmlFor="employeeId">Employee Id:</label>
         <input
           type="text"
           id="employeeId"
@@ -98,9 +101,10 @@ const FormComponent = () => {
           onChange={handleChange}
           required
         />
+        </div>
     {errors.employeeId && <span className="error">{errors.employeeId}</span>}
-  
-      <label htmlFor="destinationUrl">Destination URL :</label>
+  <div className="form-group">
+      <label htmlFor="destinationUrl">Destination URL:</label>
         <input
           type="text"
           id="destinationUrl"
@@ -109,8 +113,11 @@ const FormComponent = () => {
           onChange={handleChange}
           required
         />
+    </div>
           <div className="form-group">
-          <label htmlFor="linkname">Link Name : </label>
+          <label htmlFor="linkname">Link Name</label>
+          <div class="input-group">
+          <span>GO/</span>
           <input
             type="text"
             id="linkname"
@@ -118,22 +125,24 @@ const FormComponent = () => {
             value={formData.linkname}
             onChange={handleChange}
             required
-            // pattern="go/.*"
           />
           </div>
+          </div>
      {errors.linkname && <span className="error">{errors.linkname}</span>}
-        <label htmlFor="description">Description :</label>
+     <div className="form-group">
+        <label htmlFor="description">Description:</label>
         <textarea
           id="description"
           name="description"
           value={formData.description}
           onChange={handleChange}
-          // required
         ></textarea>
+        </div>
 {errors.description && <span className="error">{errors.description}</span>}
         <button type="submit">Submit</button>
       </form>
     </div>
+    </body>
   );
 };
 

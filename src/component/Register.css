@@ -1,28 +1,23 @@
+body {
+  background: linear-gradient(to bottom, #cac5f3, #ccee8e);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
 .form-container {
-    width: 100%;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  
-    /* background-image: url('/background.jpg'); */
-    background-size: cover; /* Cover the entire container */
-    background-position: center; /* Center the image */
-
-
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, hsl(300, 18%, 93%), #f8f7fc);
+    padding: 40px;
+    width: 400px;
+    max-width: 90%;
+    border-radius: 0 10px 10px 0;
   }
   
-  body {
-    /* images link : https://www.freepik.com/free-photos-vectors/light-background/3#uuid=3609370e-20f1-435a-93eb-e2e5a5bd6730 */
-    background-image: url('/src/images/abcd.jpg'); /* Ensure this path is correct */
-    background-size: cover;
-    background-position: center;
-    margin: 0;
-    padding: 0;
-}
   #linkname-group{
     display:flex;
   }
@@ -36,32 +31,21 @@
     font-weight: bold;
   }
   
-  .form input[type="text"],
-  .form textarea {
-    width: calc(100% - 20px); /* Adjust for padding */
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form textarea {
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form textarea {
     min-height: 100px;
+    min-width: 100px;
     resize: vertical; /* Allow vertical resizing */
-  }
-  
-  .form button[type="submit"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #7845f0;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .form button[type="submit"]:hover {
+}
+  .button:hover {
     background-color: #0056b3;
   }
   
@@ -76,12 +60,22 @@
   }
   
   .form-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
   
   .form-group label {
     display: block;
     margin-bottom: 5px;
+  }
+
+  button {
+    background: #28a745;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
   }
 
   /* Responsive adjustments */
@@ -92,10 +86,30 @@
     }
   }
   
-  @media (max-width: 400px) {
+  @media (max-width: 600px) {
     .form input[type="text"],
     .form textarea {
       width: 100%; /* Full width on smaller screens */
     }
   }
   
+
+  .input-group {
+    display: flex;
+    align-items: center;
+}
+
+.input-group span {
+    background: #71c5ec;
+    padding: 9px;
+    border-radius: 5px 0 0 5px;
+    align-items: center;
+}
+
+.input-group input {
+  margin-top: 8px;
+  padding: 10px;
+  align-items: center;
+  margin-right:2px;
+  width: 100%;
+}

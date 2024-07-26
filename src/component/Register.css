@@ -39,10 +39,10 @@ body {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-
 .form textarea {
     min-height: 100px;
-    min-width: 100px;
+    width: fit-content;
+    width: calc(100% - 20px);
     resize: vertical; /* Allow vertical resizing */
 }
   .button:hover {

@@ -101,8 +101,9 @@ const FormComponent = () => {
           onChange={handleChange}
           required
         />
+        {errors.employeeId && <span className="error">{errors.employeeId}</span>}
         </div>
-    {errors.employeeId && <span className="error">{errors.employeeId}</span>}
+    
   <div className="form-group">
       <label htmlFor="destinationUrl">Destination URL:</label>
         <input
@@ -127,8 +128,9 @@ const FormComponent = () => {
             required
           />
           </div>
+          {errors.linkname && <span className="error">{errors.linkname}</span>}
           </div>
-     {errors.linkname && <span className="error">{errors.linkname}</span>}
+    
      <div className="form-group">
         <label htmlFor="description">Description:</label>
         <textarea
@@ -137,8 +139,10 @@ const FormComponent = () => {
           value={formData.description}
           onChange={handleChange}
         ></textarea>
+        {errors.description && <span className="error">{errors.description}</span>}
         </div>
-{errors.description && <span className="error">{errors.description}</span>}
+        
+
         <button type="submit">Submit</button>
       </form>
     </div>

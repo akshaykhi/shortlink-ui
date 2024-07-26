@@ -69,7 +69,7 @@ const FormComponent = () => {
       // Handle success
       console.log("Data posted successfully........");
       console.log(response.data);
-      alert("url short link saved...");
+      alert(response.data);
     })
     .catch(error => {
       // Handle error

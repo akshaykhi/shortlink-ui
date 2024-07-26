@@ -59,7 +59,7 @@ const FormComponent = () => {
   //   console.error('Error fetching data:', error);
   // });
 
-  axios.post('https://eighth-duality-422111-h3.df.r.appspot.com/go/create', {
+  axios.post('https://lloyds-hack-grp-18.el.r.appspot.com/go/create', {
     employeeId : formData.employeeId,
     destinationUrl: formData.destinationUrl,
     shortLink : formData.linkname,
@@ -69,6 +69,7 @@ const FormComponent = () => {
       // Handle success
       console.log("Data posted successfully........");
       console.log(response.data);
+      alert("url short link saved...");
     })
     .catch(error => {
       // Handle error

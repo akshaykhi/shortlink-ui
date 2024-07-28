@@ -1,4 +1,5 @@
 runtime: nodejs18
+service: frontend
 
 handlers:
   # Serve all static files with appropriate caching
